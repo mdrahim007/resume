@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Md. Abdur Rahim</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap');
+
+        :root {
+            --primary: #1e3a5f;       /* Deep Navy */
+            --accent: #2c7be5;        /* Corporate Blue */
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --sidebar-bg: #f7fafc;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            background: #505050;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cv-page {
+            width: 210mm;
+            min-height: 297mm;
+            background: white;
+            display: grid;
+            grid-template-columns: 32% 68%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            background: var(--sidebar-bg);
+            padding: 30px 25px;
+            border-right: 1px solid var(--border-color);
+            color: var(--primary);
+        }
+
+        .profile-img-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        /* LINK STYLING: Inherit color/style, no underline */
+        .contact-item a {
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .contact-item a:hover {
+            color: var(--accent);
+        }
+
+        .contact-item i {
+            color: var(--accent);
+            width: 20px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .skill-tag {
+            display: block;
+            background: white;
+            border: 1px solid #cbd5e0;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            border-left: 4px solid var(--accent);
+        }
+
+        .info-block {
+            font-size: 12px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .info-block strong {
+            display: block;
+            color: var(--primary);
+            font-size: 13px;
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            padding: 40px;
+        }
+
+        .header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .designation {
+            font-size: 16px;
+            color: var(--accent);
+            font-weight: 500;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .summary {
+            font-size: 13px;
+            color: var(--text-dark);
+            line-height: 1.45;
+            text-align: justify;
+            margin-bottom: 20px;
+            color: #4a5568;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .section-title i {
+            background: #edf2f7;
+            color: var(--accent);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 12px;
+            font-size: 14px;
+        }
+
+        /* EXPERIENCE TIMELINE */
+        .job-card {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 2px solid #edf2f7;
+            position: relative;
+        }
+
+        .job-card::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 2px solid white;
+        }
+
+        .job-role {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .job-details {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent);
+            margin: 4px 0 8px 0;
+        }
+
+        .project-badge {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1565c0;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .job-desc ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .job-desc li {
+            font-size: 13px;
+            color: #4a5568;
+            margin-bottom: 4px;
+            line-height: 1.35;
+        }
+
+        /* PRINT BUTTON */
+        .btn-print {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-print:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+        }
+
+        /* PRINT MEDIA QUERY */
+        @media print {
+            body { background: white; padding: 0; }
+            .cv-page { width: 100%; height: 100%; box-shadow: none; display: grid; }
+            .btn-print { display: none; }
+            .sidebar { background-color: #f7fafc !important; -webkit-print-color-adjust: exact; }
+            .project-badge { background-color: #e3f2fd !important; -webkit-print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+
+<button class="btn-print" onclick="window.print()">
+    <i class="fas fa-file-pdf"></i> Download PDF
+</button>
+
+<div class="cv-page">
+    <aside class="sidebar">
+        <div class="profile-img-container">
+            <img src="img/photo.jpg" alt="Md. Abdur Rahim" onerror="this.src='https://via.placeholder.com/150?text=Photo'">
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Contact</div>
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <span><a href="tel:+8801722108281">+880 1722-108281</a></span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span><a href="mailto:mdrahim.cse@gmail.com">mdrahim.cse@gmail.com</a></span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Sadhinota Sarani, Uttar Badda, Dhaka-1212</span>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Core Competencies</div>
+            <span class="skill-tag">IT Project Management</span>
+            <span class="skill-tag">Business Analysis (BA)</span>
+            <span class="skill-tag">Requirement Gathering</span>
+            <span class="skill-tag">ITSM & Operations</span>
+            <span class="skill-tag">Stakeholder Reporting</span>
+            <span class="skill-tag">Team Leadership</span>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Education</div>
+            <div class="info-block">
+                <strong>B.Sc. in CSE</strong>
+                Asian University of Bangladesh<br>
+                <span style="color: #718096">2023</span>
+            </div>
+            <div class="info-block">
+                <strong>Diploma in Engineering</strong>
+                Kurigram Polytechnic Institute<br>
+                <span style="color: #718096">2020</span>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Personal Details</div>
+            <div class="info-block">
+                <strong>NID</strong> 8263281837
+            </div>
+            <div class="info-block">
+                <strong>Permanent Address</strong>
+                97/1, Ghumaru Vimshitola, Farakerhat, Rajarhat, Kurigram-5610
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <h1 class="name">Md. Abdur Rahim</h1>
+            <div class="designation">Support Manager | ITSM Lead</div>
+        </header>
+
+        <div class="summary">
+            Results-driven IT professional with over 4 years of experience in Support Operations and Implementation leadership. Currently managing the national <strong>myGov ITSM Project</strong> while actively applying Business Analysis methodologies to optimize workflows and requirements. Passionate about evolving into a Project Manager role by leveraging a strong foundation in technical management, stakeholder reporting, and strategic resource allocation.
+        </div>
+
+        <div class="section-title">
+            <i class="fas fa-briefcase"></i> Professional Experience
+        </div>
+
+        <div class="job-card">
+            <div class="job-role">Support Manager</div>
+            <div class="job-details">
+                <span>UY Systems Ltd.</span>
+                <span>Dec 2023 – Present</span>
+            </div>
+            <span class="project-badge">Project: myGov ITSM Project (a2i)</span>
+            <div class="job-desc">
+                <ul>
+                    <li><strong>Team Leadership:</strong> Lead the Support and Implementation team for the myGov ITSM project, ensuring efficient service delivery.</li>
+                    <li><strong>Implementation & Analysis:</strong> Oversee deployment of ITSM solutions and analyze client requirements for system optimization.</li>
+                    <li><strong>Reporting:</strong> Manage all reporting requirements, generating detailed progress reports and performance metrics.</li>
+                    <li><strong>Strategy:</strong> Coordinate daily operations to ensure Service Level Agreements (SLAs) are met.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job-card">
+            <div class="job-role">Sr. Support Executive</div>
+            <div class="job-details">
+                <span>Business Automation Ltd.</span>
+                <span>Mar 2021 – Nov 2023</span>
+            </div>
+            <span class="project-badge">Project: National Portal Framework (a2i)</span>
+            <div class="job-desc">
+                <ul>
+                    <li><strong>Leadership:</strong> Led the support team and provided mentorship to resolve escalated technical issues.</li>
+                    <li><strong>QA & Requirement Validation:</strong> Executed manual testing procedures to verify government website functionality against requirements.</li>
+                    <li><strong>Client Ops:</strong> Managed multi-channel support and tracked inbound tickets for clear resolutions.</li>
+                    <li><strong>Training:</strong> Conducted client training sessions on using the National Portal Framework effectively.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job-card" style="margin-bottom: 0;">
+            <div class="job-role">Data Entry Operator</div>
+            <div class="job-details">
+                <span>Chhinnamukul Bangladesh</span>
+                <span>Jul 2018 – Nov 2019</span>
+            </div>
+            <span class="project-badge">Project: Basic Literacy Project (MOPME)</span>
+            <div class="job-desc">
+                <ul>
+                    <li>Accurately entered and updated data into designated systems with high precision.</li>
+                    <li>Performed quality checks on data to identify and correct errors.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <div class="section-title">
+                <i class="fas fa-user-check"></i> Reference
+            </div>
+            <div style="background: #f8f9fa; padding: 10px 15px 10px 15px; border-radius: 6px; border: 1px solid #e2e8f0; font-size: 13px; color: #4a5568">
+                <strong>Md. Moniruzzaman, PMP</strong><br>
+                Project Director & CTO, UY Systems Ltd.<br>
+                <span style="color: var(--accent); font-weight: 500;">zaman@uysys.com</span> | +880 1712-027826
+            </div>
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>
