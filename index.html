@@ -9,10 +9,10 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap');
 
         :root {
-            --primary: #1e3a5f;       /* Deep Navy */
-            --accent: #2c7be5;        /* Corporate Blue */
+            --primary: #1e293b;       /* Dark Slate */
+            --accent: #0f766e;        /* Darker Teal (Accessible/Print-safe) */
             --text-dark: #2d3748;
-            --text-light: #718096;
+            --text-light: #475569;    /* Darker Slate (Accessible) */
             --sidebar-bg: #f7fafc;
             --border-color: #e2e8f0;
         }
@@ -66,7 +66,7 @@
         }
 
         .sidebar-section {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .sidebar-title {
@@ -167,7 +167,6 @@
             line-height: 1.45;
             text-align: justify;
             margin-bottom: 20px;
-            color: #4a5568;
         }
 
         .section-title {
@@ -177,7 +176,7 @@
             color: var(--primary);
             display: flex;
             align-items: center;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .section-title i {
@@ -195,28 +194,33 @@
 
         /* EXPERIENCE TIMELINE */
         .job-card {
-            margin-bottom: 20px;
-            padding-left: 20px;
-            border-left: 2px solid #edf2f7;
-            position: relative;
+            margin-bottom: 15px;
         }
 
-        .job-card::before {
-            content: '';
-            position: absolute;
-            left: -6px;
-            top: 5px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--accent);
-            border: 2px solid white;
+        .job-content {
+            border-left: 2px solid var(--border-color);
+            padding-left: 20px;
+            margin-left: 4px;
+            margin-top: 5px;
         }
 
         .job-role {
             font-size: 16px;
             font-weight: 700;
             color: var(--primary);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .job-role::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
         }
 
         .job-details {
@@ -230,8 +234,8 @@
 
         .project-badge {
             display: inline-block;
-            background: #e3f2fd;
-            color: #1565c0;
+            background: #ccfbf1;
+            color: #0f766e;
             font-size: 11px;
             padding: 3px 8px;
             border-radius: 4px;
@@ -241,14 +245,15 @@
 
         .job-desc ul {
             margin: 0;
-            padding-left: 18px;
+            padding-left: 20px;
         }
 
         .job-desc li {
             font-size: 13px;
             color: #4a5568;
             margin-bottom: 4px;
-            line-height: 1.35;
+            line-height: 1.45;
+            text-align: justify;
         }
 
         /* PRINT BUTTON */
@@ -275,26 +280,127 @@
             box-shadow: 0 6px 16px rgba(0,0,0,0.3);
         }
 
+        .reference-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            font-size: 13px;
+            color: #4a5568;
+            border-left: 4px solid var(--accent); /* Adds professional accent */
+            text-align: justify;
+        }
+
+        .reference-card a {
+            color: var(--accent);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .reference-section {
+            margin-top: 20px;
+            page-break-inside: avoid;
+        }
+
+        .qr-code-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .qr-code-container img {
+            width: 90px;
+            height: 90px;
+            padding: 4px;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        .mobile-header { display: none; }
+
+        /* MOBILE RESPONSIVENESS */
+        @media screen and (max-width: 800px) {
+            body {
+                padding: 0;
+                background: white;
+                display: block;
+            }
+
+            .cv-page {
+                width: 100%;
+                grid-template-columns: 1fr;
+                box-shadow: none;
+                min-height: auto;
+            }
+
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+                text-align: center;
+            }
+
+            .contact-item {
+                justify-content: center;
+            }
+
+            .main-content {
+                padding: 30px 20px;
+            }
+
+            .btn-print {
+                top: auto;
+                bottom: 20px;
+                right: 20px;
+                width: 48px;
+                height: 48px;
+                padding: 0;
+                gap: 0;
+                border-radius: 50%;
+                justify-content: center;
+                font-size: 0; /* Hide text, show icon only */
+            }
+            
+            .btn-print i {
+                margin: 0;
+                font-size: 20px;
+            }
+
+            .mobile-header { display: block; margin-bottom: 25px; }
+            .mobile-header .name { font-size: 26px; }
+            .mobile-header .designation { font-size: 14px; }
+            .main-content .header { display: none; }
+        }
+
+        /* REMOVE BROWSER HEADERS/FOOTERS */
+        @page {
+            margin: 0;
+        }
+
         /* PRINT MEDIA QUERY */
         @media print {
             body { background: white; padding: 0; }
             .cv-page { width: 100%; height: 100%; box-shadow: none; display: grid; }
             .btn-print { display: none; }
             .sidebar { background-color: #f7fafc !important; -webkit-print-color-adjust: exact; }
-            .project-badge { background-color: #e3f2fd !important; -webkit-print-color-adjust: exact; }
+            .project-badge { background-color: #ccfbf1 !important; -webkit-print-color-adjust: exact; }
+            .job-card, .reference-card, .sidebar-section { page-break-inside: avoid; }
         }
     </style>
 </head>
 <body>
 
 <button class="btn-print" onclick="window.print()">
-    <i class="fas fa-file-pdf"></i> Download PDF
+    <i class="fas fa-file-pdf"></i> Print / Download PDF
 </button>
 
 <div class="cv-page">
     <aside class="sidebar">
         <div class="profile-img-container">
             <img src="img/photo.jpg" alt="Md. Abdur Rahim" onerror="this.src='https://via.placeholder.com/150?text=Photo'">
+        </div>
+
+        <div class="mobile-header">
+            <h1 class="name">Md. Abdur Rahim</h1>
+            <div class="designation">Support Manager | ITSM Lead</div>
         </div>
 
         <div class="sidebar-section">
@@ -308,19 +414,24 @@
                 <span><a href="mailto:mdrahim.cse@gmail.com">mdrahim.cse@gmail.com</a></span>
             </div>
             <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <span><a href="https://www.linkedin.com/in/abrahim007" target="_blank">linkedin.com/in/abrahim007</a></span>
+            </div>
+            <div class="contact-item">
                 <i class="fas fa-map-marker-alt"></i>
-                <span>Sadhinota Sarani, Uttar Badda, Dhaka-1212</span>
+                <span><a href="https://maps.google.com/?q=Sadhinota+Sarani,+Uttar+Badda,+Dhaka-1212" target="_blank">Sadhinota Sarani, Uttar Badda, Dhaka-1212</a></span>
             </div>
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-title">Core Competencies</div>
+            <div class="sidebar-title">Skills & Expertise</div>
             <span class="skill-tag">IT Project Management</span>
             <span class="skill-tag">Business Analysis (BA)</span>
             <span class="skill-tag">Requirement Gathering</span>
             <span class="skill-tag">ITSM & Operations</span>
-            <span class="skill-tag">Stakeholder Reporting</span>
             <span class="skill-tag">Team Leadership</span>
+            <span class="skill-tag">Jira / Confluence</span>
+            <span class="skill-tag">MS Excel (Advanced)</span>
         </div>
 
         <div class="sidebar-section">
@@ -328,25 +439,20 @@
             <div class="info-block">
                 <strong>B.Sc. in CSE</strong>
                 Asian University of Bangladesh<br>
-                <span style="color: #718096">2023</span>
+                <span style="color: var(--text-light)">2023</span>
             </div>
             <div class="info-block">
                 <strong>Diploma in Engineering</strong>
                 Kurigram Polytechnic Institute<br>
-                <span style="color: #718096">2020</span>
+                <span style="color: var(--text-light)">2020</span>
             </div>
         </div>
 
-        <div class="sidebar-section">
-            <div class="sidebar-title">Personal Details</div>
-            <div class="info-block">
-                <strong>NID</strong> 8263281837
-            </div>
-            <div class="info-block">
-                <strong>Permanent Address</strong>
-                97/1, Ghumaru Vimshitola, Farakerhat, Rajarhat, Kurigram-5610
-            </div>
+        <div class="sidebar-section qr-code-container">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.linkedin.com/in/abrahim007" alt="LinkedIn QR Code">
+            <div style="font-size: 11px; color: var(--text-light); margin-top: 5px;">Scan for LinkedIn</div>
         </div>
+
     </aside>
 
     <main class="main-content">
@@ -365,61 +471,67 @@
 
         <div class="job-card">
             <div class="job-role">Support Manager</div>
-            <div class="job-details">
-                <span>UY Systems Ltd.</span>
-                <span>Dec 2023 – Present</span>
-            </div>
-            <span class="project-badge">Project: myGov ITSM Project (a2i)</span>
-            <div class="job-desc">
-                <ul>
-                    <li><strong>Team Leadership:</strong> Lead the Support and Implementation team for the myGov ITSM project, ensuring efficient service delivery.</li>
-                    <li><strong>Implementation & Analysis:</strong> Oversee deployment of ITSM solutions and analyze client requirements for system optimization.</li>
-                    <li><strong>Reporting:</strong> Manage all reporting requirements, generating detailed progress reports and performance metrics.</li>
-                    <li><strong>Strategy:</strong> Coordinate daily operations to ensure Service Level Agreements (SLAs) are met.</li>
-                </ul>
+            <div class="job-content">
+                <div class="job-details">
+                    <span>UY Systems Ltd.</span>
+                    <span>Dec 2023 – Present</span>
+                </div>
+                <span class="project-badge">Project: myGov ITSM Project (a2i)</span>
+                <div class="job-desc">
+                    <ul>
+                        <li><strong>Team Leadership:</strong> Lead the Support and Implementation team for the myGov ITSM project, ensuring efficient service delivery.</li>
+                        <li><strong>Implementation & Analysis:</strong> Oversee deployment of ITSM solutions and analyze client requirements for system optimization.</li>
+                        <li><strong>Reporting:</strong> Manage all reporting requirements, generating detailed progress reports and performance metrics.</li>
+                        <li><strong>Strategy:</strong> Coordinate daily operations to ensure Service Level Agreements (SLAs) are met.</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="job-card">
             <div class="job-role">Sr. Support Executive</div>
-            <div class="job-details">
-                <span>Business Automation Ltd.</span>
-                <span>Mar 2021 – Nov 2023</span>
-            </div>
-            <span class="project-badge">Project: National Portal Framework (a2i)</span>
-            <div class="job-desc">
-                <ul>
-                    <li><strong>Leadership:</strong> Led the support team and provided mentorship to resolve escalated technical issues.</li>
-                    <li><strong>QA & Requirement Validation:</strong> Executed manual testing procedures to verify government website functionality against requirements.</li>
-                    <li><strong>Client Ops:</strong> Managed multi-channel support and tracked inbound tickets for clear resolutions.</li>
-                    <li><strong>Training:</strong> Conducted client training sessions on using the National Portal Framework effectively.</li>
-                </ul>
+            <div class="job-content">
+                <div class="job-details">
+                    <span>Business Automation Ltd.</span>
+                    <span>Mar 2021 – Nov 2023</span>
+                </div>
+                <span class="project-badge">Project: National Portal Framework (a2i)</span>
+                <div class="job-desc">
+                    <ul>
+                        <li><strong>Leadership:</strong> Led the support team and provided mentorship to resolve escalated technical issues.</li>
+                        <li><strong>QA & Requirement Validation:</strong> Executed manual testing procedures to verify government website functionality against requirements.</li>
+                        <li><strong>Client Ops:</strong> Managed multi-channel support and tracked inbound tickets for clear resolutions.</li>
+                        <li><strong>Training:</strong> Conducted training sessions on National Portal Framework.</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="job-card" style="margin-bottom: 0;">
             <div class="job-role">Data Entry Operator</div>
-            <div class="job-details">
-                <span>Chhinnamukul Bangladesh</span>
-                <span>Jul 2018 – Nov 2019</span>
-            </div>
-            <span class="project-badge">Project: Basic Literacy Project (MOPME)</span>
-            <div class="job-desc">
-                <ul>
-                    <li>Accurately entered and updated data into designated systems with high precision.</li>
-                    <li>Performed quality checks on data to identify and correct errors.</li>
-                </ul>
+            <div class="job-content">
+                <div class="job-details">
+                    <span>Chhinnamukul Bangladesh</span>
+                    <span>Jul 2018 – Nov 2019</span>
+                </div>
+                <span class="project-badge">Project: Basic Literacy Project (MOPME)</span>
+                <div class="job-desc">
+                    <ul>
+                        <li>Accurately entered and updated data into designated systems with high precision.</li>
+                        <li>Performed quality checks on data to identify and correct errors.</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div style="margin-top: 30px;">
+        <div class="reference-section">
             <div class="section-title">
                 <i class="fas fa-user-check"></i> Reference
             </div>
-            <div style="background: #f8f9fa; padding: 10px 15px 10px 15px; border-radius: 6px; border: 1px solid #e2e8f0; font-size: 13px; color: #4a5568">
+            <div class="reference-card">
                 <strong>Md. Moniruzzaman, PMP</strong><br>
                 Project Director & CTO, UY Systems Ltd.<br>
-                <span style="color: var(--accent); font-weight: 500;">zaman@uysys.com</span> | +880 1712-027826
+                <a href="mailto:zaman@uysys.com">zaman@uysys.com</a> | +880 1712-027826
             </div>
         </div>
 
