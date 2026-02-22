@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Md. Abdur Rahim</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <meta name="description" content="Professional CV of Md. Abdur Rahim - Support Manager & ITSM Lead. Experienced in IT Operations, Project Management, and Business Analysis.">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap');
 
@@ -66,7 +67,7 @@
         }
 
         .sidebar-section {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .sidebar-title {
@@ -105,6 +106,28 @@
             width: 20px;
             margin-top: 3px;
             flex-shrink: 0;
+        }
+
+        /* MOBILE VCARD BUTTON */
+        .mobile-vcard-btn {
+            display: none; /* Hidden on desktop */
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .mobile-vcard-btn a {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 12px;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+        
+        .mobile-vcard-btn a i {
+            margin-right: 6px;
         }
 
         .skill-tag {
@@ -195,6 +218,7 @@
         /* EXPERIENCE TIMELINE */
         .job-card {
             margin-bottom: 15px;
+            margin-left: 11px;
         }
 
         .job-content {
@@ -289,6 +313,8 @@
             color: #4a5568;
             border-left: 4px solid var(--accent); /* Adds professional accent */
             text-align: justify;
+            line-height: 1.3;
+            /* margin-left: 11px; */
         }
 
         .reference-card a {
@@ -327,31 +353,49 @@
 
             .cv-page {
                 width: 100%;
-                grid-template-columns: 1fr;
                 box-shadow: none;
                 min-height: auto;
+                display: flex;
+                flex-direction: column;
+                padding: 20px; /* Restore padding for mobile container */
             }
 
-            .sidebar {
-                border-right: none;
-                border-bottom: 1px solid var(--border-color);
+            /* FLATTEN LAYOUT FOR REORDERING */
+            .sidebar, .main-content {
+                display: contents;
+            }
+
+            /* REORDER SECTIONS */
+            .profile-img-container { order: 1; margin-top: 20px; }
+            .mobile-header { order: 2; text-align: center; }
+            
+            .contact-section { 
+                order: 3; 
                 text-align: center;
+                border-bottom: 1px solid var(--border-color);
+                padding-bottom: 10px;
+                margin-bottom: 20px;
             }
+            /* Center contact items inside the contact section */
+            .contact-section .contact-item { justify-content: center; }
 
-            .contact-item {
-                justify-content: center;
+            .summary { order: 4; }
+            .experience-section { order: 5; 
+            padding-bottom: 20px;
             }
-
-            .main-content {
-                padding: 30px 20px;
+            
+            .skills-section { order: 6; margin-top: 10px; }
+            .education-section { order: 7; 
+            margin-bottom: 0;
             }
+            .reference-section { order: 8; }
 
             .btn-print {
                 top: auto;
                 bottom: 20px;
                 right: 20px;
-                width: 48px;
-                height: 48px;
+                width: 42px;
+                height: 42px;
                 padding: 0;
                 gap: 0;
                 border-radius: 50%;
@@ -361,13 +405,20 @@
             
             .btn-print i {
                 margin: 0;
-                font-size: 20px;
+                font-size: 18px;
             }
 
             .mobile-header { display: block; margin-bottom: 25px; }
             .mobile-header .name { font-size: 26px; }
             .mobile-header .designation { font-size: 14px; }
             .main-content .header { display: none; }
+            .qr-code-container { display: none; }
+            .mobile-vcard-btn { display: block; }
+
+            /* BETTER MOBILE TYPOGRAPHY: Switch from Justify to Left */
+            .summary, 
+            .job-desc li, 
+            .reference-card { text-align: left; }
         }
 
         /* REMOVE BROWSER HEADERS/FOOTERS */
@@ -403,7 +454,7 @@
             <div class="designation">Support Manager | ITSM Lead</div>
         </div>
 
-        <div class="sidebar-section">
+        <div class="sidebar-section contact-section">
             <div class="sidebar-title">Contact</div>
             <div class="contact-item">
                 <i class="fas fa-phone-alt"></i>
@@ -421,9 +472,14 @@
                 <i class="fas fa-map-marker-alt"></i>
                 <span><a href="https://maps.google.com/?q=Sadhinota+Sarani,+Uttar+Badda,+Dhaka-1212" target="_blank">Sadhinota Sarani, Uttar Badda, Dhaka-1212</a></span>
             </div>
+            
+            <!-- Mobile Only vCard Button -->
+            <div class="mobile-vcard-btn">
+                <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AMd.%20Abdur%20Rahim%0ATITLE%3ASupport%20Manager%20%7C%20ITSM%20Lead%0ATEL%3BTYPE%3DCELL%3A%2B8801722108281%0AEMAIL%3Amdrahim.cse%40gmail.com%0AURL%3Ahttps%3A%2F%2Fwww.linkedin.com%2Fin%2Fabrahim007%0AEND%3AVCARD" download="contact.vcf"><i class="fas fa-address-card"></i> Save Contact</a>
+            </div>
         </div>
 
-        <div class="sidebar-section">
+        <div class="sidebar-section skills-section">
             <div class="sidebar-title">Skills & Expertise</div>
             <span class="skill-tag">IT Project Management</span>
             <span class="skill-tag">Business Analysis (BA)</span>
@@ -434,7 +490,7 @@
             <span class="skill-tag">MS Excel (Advanced)</span>
         </div>
 
-        <div class="sidebar-section">
+        <div class="sidebar-section education-section">
             <div class="sidebar-title">Education</div>
             <div class="info-block">
                 <strong>B.Sc. in CSE</strong>
@@ -465,61 +521,63 @@
             Results-driven IT professional with over 4 years of experience in Support Operations and Implementation leadership. Currently managing the national <strong>myGov ITSM Project</strong> while actively applying Business Analysis methodologies to optimize workflows and requirements. Passionate about evolving into a Project Manager role by leveraging a strong foundation in technical management, stakeholder reporting, and strategic resource allocation.
         </div>
 
-        <div class="section-title">
-            <i class="fas fa-briefcase"></i> Professional Experience
-        </div>
+        <div class="experience-section">
+            <div class="section-title">
+                <i class="fas fa-briefcase"></i> Professional Experience
+            </div>
 
-        <div class="job-card">
-            <div class="job-role">Support Manager</div>
-            <div class="job-content">
-                <div class="job-details">
-                    <span>UY Systems Ltd.</span>
-                    <span>Dec 2023 – Present</span>
-                </div>
-                <span class="project-badge">Project: myGov ITSM Project (a2i)</span>
-                <div class="job-desc">
-                    <ul>
-                        <li><strong>Team Leadership:</strong> Lead the Support and Implementation team for the myGov ITSM project, ensuring efficient service delivery.</li>
-                        <li><strong>Implementation & Analysis:</strong> Oversee deployment of ITSM solutions and analyze client requirements for system optimization.</li>
-                        <li><strong>Reporting:</strong> Manage all reporting requirements, generating detailed progress reports and performance metrics.</li>
-                        <li><strong>Strategy:</strong> Coordinate daily operations to ensure Service Level Agreements (SLAs) are met.</li>
-                    </ul>
+            <div class="job-card">
+                <div class="job-role">Support Manager</div>
+                <div class="job-content">
+                    <div class="job-details">
+                        <span>UY Systems Ltd.</span>
+                        <span>Dec 2023 – Present</span>
+                    </div>
+                    <span class="project-badge">Project: myGov ITSM Project (a2i)</span>
+                    <div class="job-desc">
+                        <ul>
+                            <li><strong>Team Leadership:</strong> Lead the Support and Implementation team for the myGov ITSM project, ensuring efficient service delivery.</li>
+                            <li><strong>Implementation & Analysis:</strong> Oversee deployment of ITSM solutions and analyze client requirements for system optimization.</li>
+                            <li><strong>Reporting:</strong> Manage all reporting requirements, generating detailed progress reports and performance metrics.</li>
+                            <li><strong>Strategy:</strong> Coordinate daily operations to ensure Service Level Agreements (SLAs) are met.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="job-card">
-            <div class="job-role">Sr. Support Executive</div>
-            <div class="job-content">
-                <div class="job-details">
-                    <span>Business Automation Ltd.</span>
-                    <span>Mar 2021 – Nov 2023</span>
-                </div>
-                <span class="project-badge">Project: National Portal Framework (a2i)</span>
-                <div class="job-desc">
-                    <ul>
-                        <li><strong>Leadership:</strong> Led the support team and provided mentorship to resolve escalated technical issues.</li>
-                        <li><strong>QA & Requirement Validation:</strong> Executed manual testing procedures to verify government website functionality against requirements.</li>
-                        <li><strong>Client Ops:</strong> Managed multi-channel support and tracked inbound tickets for clear resolutions.</li>
-                        <li><strong>Training:</strong> Conducted training sessions on National Portal Framework.</li>
-                    </ul>
+            <div class="job-card">
+                <div class="job-role">Sr. Support Executive</div>
+                <div class="job-content">
+                    <div class="job-details">
+                        <span>Business Automation Ltd.</span>
+                        <span>Mar 2021 – Nov 2023</span>
+                    </div>
+                    <span class="project-badge">Project: National Portal Framework (a2i)</span>
+                    <div class="job-desc">
+                        <ul>
+                            <li><strong>Leadership:</strong> Led the support team and provided mentorship to resolve escalated technical issues.</li>
+                            <li><strong>QA & Requirement Validation:</strong> Executed manual testing procedures to verify government website functionality against requirements.</li>
+                            <li><strong>Client Ops:</strong> Managed multi-channel support and tracked inbound tickets for clear resolutions.</li>
+                            <li><strong>Training:</strong> Conducted training sessions on National Portal Framework.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="job-card" style="margin-bottom: 0;">
-            <div class="job-role">Data Entry Operator</div>
-            <div class="job-content">
-                <div class="job-details">
-                    <span>Chhinnamukul Bangladesh</span>
-                    <span>Jul 2018 – Nov 2019</span>
-                </div>
-                <span class="project-badge">Project: Basic Literacy Project (MOPME)</span>
-                <div class="job-desc">
-                    <ul>
-                        <li>Accurately entered and updated data into designated systems with high precision.</li>
-                        <li>Performed quality checks on data to identify and correct errors.</li>
-                    </ul>
+            <div class="job-card" style="margin-bottom: 0;">
+                <div class="job-role">Data Entry Operator</div>
+                <div class="job-content">
+                    <div class="job-details">
+                        <span>Chhinnamukul Bangladesh</span>
+                        <span>Jul 2018 – Nov 2019</span>
+                    </div>
+                    <span class="project-badge">Project: Basic Literacy Project (MOPME)</span>
+                    <div class="job-desc">
+                        <ul>
+                            <li>Accurately entered and updated data into designated systems with high precision.</li>
+                            <li>Performed quality checks on data to identify and correct errors.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
