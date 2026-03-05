@@ -1,89 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Md. Abdur Rahim</title>
+    <title>CV - Md. Abdur Rahim | Project Coordinator</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <meta name="description" content="Professional CV of Md. Abdur Rahim - Support Manager & Implementation Head. Experienced in IT Operations, Project Management, and Business Analysis.">
+    <meta name="description"
+        content="Professional CV of Md. Abdur Rahim - Project Coordinator & Support Manager. Experienced in Project Management, Stakeholder Management, and Business Analysis.">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600;700&display=swap');
 
         :root {
-            --primary: #1e293b;       /* Dark Slate */
-            --accent: #0f766e;        /* Darker Teal (Accessible/Print-safe) */
-            --text-dark: #2d3748;
-            --text-light: #475569;    /* Darker Slate (Accessible) */
-            --text-body: #4a5568;     /* Body Text */
-            --sidebar-bg: #f7fafc;
-            --border-color: #e2e8f0;
+            --primary: #1a1828;
+            --accent: #8a6d30;
+            --accent-light: #b8935a;
+            --text-dark: #1a1828;
+            --text-light: #5c5470;
+            --text-body: #3d3555;
+            --sidebar-bg: #ede8df;
+            --sidebar-border: #c9b88a;
+            --border-color: #d4c8a8;
             --page-bg: #ffffff;
-            --tag-bg: #ffffff;
-            --badge-bg: #ccfbf1;
-            --badge-text: #0f766e;
-            --ref-bg: #f8f9fa;
-            --card-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            --body-bg: #505050;
+            --tag-bg: #f7f2e8;
+            --badge-bg: #e8dfc8;
+            --badge-text: #6b5020;
+            --ref-bg: #f5f0e5;
+            --card-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 30px 60px rgba(0, 0, 0, 0.12);
+            --body-bg: #f3efe7;
+            --icon-bg: #e2d9c5;
+            --name-color: #1a1828;
+            --hr-color: #c9b88a;
         }
 
         body.dark-mode {
-            --primary: #f1f5f9;       /* White-ish Slate */
-            --accent: #2dd4bf;        /* Bright Teal */
-            --text-dark: #e2e8f0;     /* Light Gray */
-            --text-light: #94a3b8;    /* Muted Slate */
-            --text-body: #cbd5e1;     /* Readable Light Gray */
-            --sidebar-bg: #1e293b;    /* Dark Sidebar */
-            --border-color: #334155;  /* Dark Border */
-            --page-bg: #0f172a;       /* Deep Blue/Gray Background */
-            --tag-bg: #1e293b;
-            --badge-bg: #115e59;      /* Dark Teal BG */
-            --badge-text: #5eead4;    /* Light Teal Text */
-            --ref-bg: #1e293b;
-            --card-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            --body-bg: #0f172a;       /* Dark background for the window */
+            --primary: #F5F0E8;
+            --accent: #D4AF80;
+            --accent-light: #e8c99a;
+            --text-dark: #F2EEE8;
+            --text-light: #C8C2BC;
+            --text-body: #EAE4DC;
+            --sidebar-bg: #070712;
+            --sidebar-border: rgba(212, 175, 128, 0.35);
+            --border-color: rgba(212, 175, 128, 0.2);
+            --page-bg: #0e0e16;
+            --tag-bg: rgba(212, 175, 128, 0.07);
+            --badge-bg: rgba(212, 175, 128, 0.13);
+            --badge-text: #D4AF80;
+            --ref-bg: rgba(212, 175, 128, 0.05);
+            --card-shadow: 0 0 0 1px rgba(212, 175, 128, 0.15), 0 40px 100px rgba(0, 0, 0, 0.9);
+            --body-bg: #0b0b14;
+            --icon-bg: rgba(212, 175, 128, 0.12);
+            --name-color: #FFFFFF;
+            --hr-color: rgba(212, 175, 128, 0.3);
         }
 
-        * {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(212, 175, 128, 0.25) transparent;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(212, 175, 128, 0.3);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(212, 175, 128, 0.8);
         }
 
         body {
             background: var(--body-bg);
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Raleway', sans-serif;
             margin: 0;
             padding: 40px 0;
             display: flex;
             justify-content: center;
+            min-height: 100vh;
+            transition: background 0.4s ease;
         }
 
         .cv-page {
             width: 210mm;
             min-height: 297mm;
+            max-width: 99%;
             background: var(--page-bg);
             display: grid;
-            grid-template-columns: 32% 68%;
+            grid-template-columns: 31% 69%;
             box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
         }
 
-        /* SIDEBAR */
         .sidebar {
             background: var(--sidebar-bg);
-            padding: 30px 25px;
-            border-right: 1px solid var(--border-color);
+            padding: 48px 20px 34px 22px;
+            border-right: 2px solid var(--sidebar-border);
             color: var(--primary);
+            transition: background 0.4s ease, border-color 0.4s ease;
         }
 
         .profile-img-container {
-            width: 140px;
-            height: 140px;
-            margin: 0 auto 25px;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 24px;
             border-radius: 50%;
             overflow: hidden;
-            border: 4px solid var(--page-bg);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 2px solid var(--accent);
+            outline: 4px solid var(--icon-bg);
+            outline-offset: 2px;
         }
 
         .profile-img-container img {
@@ -93,619 +137,897 @@
         }
 
         .sidebar-section {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .sidebar-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 9.5px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--primary);
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 5px;
-            margin-bottom: 15px;
+            letter-spacing: 0.22em;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            padding-bottom: 7px;
+            border-bottom: 1px solid var(--border-color);
+            transition: color 0.4s ease, border-color 0.4s ease;
+        }
+
+        .sidebar-title i {
+            background: var(--icon-bg);
+            color: var(--accent);
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 9.5px;
+            flex-shrink: 0;
+            transition: background 0.4s ease;
         }
 
         .contact-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 12px;
-            font-size: 13px;
+            margin-bottom: 9px;
+            font-size: 11.5px;
             color: var(--text-dark);
             line-height: 1.5;
+            transition: color 0.4s ease;
         }
 
-        /* LINK STYLING: Inherit color/style, no underline */
         .contact-item a {
             color: inherit;
             text-decoration: none;
-            cursor: pointer;
         }
+
         .contact-item a:hover {
             color: var(--accent);
         }
 
         .contact-item i {
             color: var(--accent);
-            width: 20px;
-            margin-top: 3px;
+            width: 17px;
+            margin-top: 2px;
             flex-shrink: 0;
+            font-size: 11px;
         }
 
-        /* MOBILE VCARD BUTTON */
         .mobile-vcard-btn {
-            display: none; /* Hidden on desktop */
-            margin-top: 5px;
+            display: none;
+            margin-top: 6px;
             margin-bottom: 10px;
         }
+
         .mobile-vcard-btn a {
             display: inline-block;
             background: var(--accent);
-            color: white;
-            padding: 6px 12px;
+            color: #ffffff;
+            padding: 5px 14px;
             border-radius: 50px;
-            font-weight: 500;
-            font-size: 12px;
+            font-weight: 600;
+            font-size: 11px;
             text-decoration: none;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-        }
-        
-        .mobile-vcard-btn a i {
-            margin-right: 6px;
         }
 
         .skill-tag {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 8px;
             background: var(--tag-bg);
             border: 1px solid var(--border-color);
-            padding: 8px 12px;
-            margin-bottom: 8px;
-            border-radius: 6px;
-            font-size: 12px;
+            padding: 6px 10px;
+            margin-bottom: 6px;
+            border-radius: 4px;
+            font-size: 11px;
             font-weight: 500;
-            border-left: 4px solid var(--accent);
+            color: var(--text-dark);
+            letter-spacing: 0.02em;
+            transition: background 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+        }
+
+        .skill-tag::before {
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 2px;
+            flex-shrink: 0;
         }
 
         .info-block {
-            font-size: 12px;
-            line-height: 1.6;
+            font-size: 11.5px;
+            line-height: 1.65;
             margin-bottom: 12px;
+            color: var(--text-body);
         }
 
         .info-block strong {
             display: block;
             color: var(--primary);
-            font-size: 13px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 1px;
         }
 
-        /* MAIN CONTENT */
         .main-content {
-            padding: 40px;
+            padding: 48px 34px 34px 30px;
         }
 
         .header {
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 15px;
-            margin-bottom: 15px;
+            padding-bottom: 16px;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            display: block;
+            height: 1px;
+            background: var(--hr-color);
+            margin-top: 14px;
+            transition: background 0.4s ease;
         }
 
         .name {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 30px;
+            font-family: 'Playfair Display', serif;
+            font-size: 27px;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--name-color);
             text-transform: uppercase;
+            letter-spacing: 0.05em;
             margin: 0;
-            line-height: 1;
+            line-height: 1.1;
+            transition: color 0.4s ease;
         }
 
         .designation {
-            font-size: 16px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 10.5px;
             color: var(--accent);
-            font-weight: 500;
+            font-weight: 600;
             margin-top: 8px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.22em;
+            transition: color 0.4s ease;
         }
 
         .summary {
-            font-size: 13px;
-            color: var(--text-dark);
-            line-height: 1.45;
+            font-size: 12px;
+            color: var(--text-body);
+            line-height: 1.75;
             text-align: justify;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
+            transition: color 0.4s ease;
         }
 
         .section-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--primary);
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            gap: 10px;
+            margin-bottom: 12px;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border-color);
+            transition: border-color 0.4s ease;
         }
 
         .section-title i {
-            background: #edf2f7;
+            background: var(--icon-bg);
             color: var(--accent);
-            width: 32px;
-            height: 32px;
+            width: 22px;
+            height: 22px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            margin-right: 12px;
-            font-size: 14px;
+            font-size: 9.5px;
+            flex-shrink: 0;
+            transition: background 0.4s ease;
         }
 
-        /* EXPERIENCE TIMELINE */
+        .section-title-text {
+            font-family: 'Raleway', sans-serif;
+            font-size: 9.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent);
+            transition: color 0.4s ease;
+        }
+
         .job-card {
-            margin-bottom: 15px;
-            margin-left: 11px;
+            margin-bottom: 14px;
         }
 
         .job-content {
-            border-left: 2px solid var(--border-color);
-            padding-left: 20px;
-            margin-left: 4px;
-            margin-top: 5px;
+            border-left: 1px solid var(--border-color);
+            padding-left: 16px;
+            margin-left: 3px;
+            margin-top: 4px;
+            transition: border-color 0.4s ease;
         }
 
         .job-role {
-            font-size: 16px;
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
             font-weight: 700;
             color: var(--primary);
             position: relative;
-            padding-left: 25px;
+            padding-left: 20px;
+            line-height: 1.3;
+            transition: color 0.4s ease;
         }
 
         .job-role::before {
             content: '';
             position: absolute;
-            left: 0;
+            left: -2px;
             top: 5px;
-            width: 10px;
-            height: 10px;
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
             background: var(--accent);
+        }
+
+        body.dark-mode .job-role::before {
+            box-shadow: 0 0 0 2px rgba(212, 175, 128, 0.2), 0 0 8px rgba(212, 175, 128, 0.35);
         }
 
         .job-details {
             display: flex;
             justify-content: space-between;
-            font-size: 12px;
+            font-size: 10.5px;
             font-weight: 600;
             color: var(--accent);
-            margin: 4px 0 8px 0;
+            margin: 4px 0 6px;
+            letter-spacing: 0.04em;
+            transition: color 0.4s ease;
         }
 
         .project-badge {
             display: inline-block;
             background: var(--badge-bg);
             color: var(--badge-text);
-            font-size: 11px;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-weight: 600;
-            margin-bottom: 8px;
+            font-size: 10px;
+            padding: 2px 10px;
+            border-radius: 100px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: 0.04em;
+            transition: background 0.4s ease, color 0.4s ease;
         }
 
         .job-desc ul {
             margin: 0;
-            padding-left: 20px;
+            padding-left: 16px;
         }
 
         .job-desc li {
-            font-size: 13px;
+            font-size: 11.5px;
             color: var(--text-body);
-            margin-bottom: 4px;
-            line-height: 1.45;
+            margin-bottom: 3px;
+            line-height: 1.55;
             text-align: justify;
-        }
-
-        /* FLOATING ACTION BUTTONS */
-        .btn-print, .btn-toggle-theme {
-            position: fixed;
-            top: 30px;
-            height: 44px;
-            border-radius: 50px;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            transition: all 0.3s ease;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid var(--border-color);
-            background: var(--page-bg);
-            color: var(--text-dark);
-        }
-
-        /* Primary Action: Print */
-        .btn-print {
-            right: 30px;
-            padding: 0 24px;
-            font-weight: 600;
-            font-size: 13px;
-            gap: 8px;
-        }
-
-        .btn-print:hover, .btn-toggle-theme:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-            border-color: var(--accent);
-            color: var(--accent);
+            transition: color 0.4s ease;
         }
 
         .reference-card {
             background: var(--ref-bg);
-            padding: 15px;
-            border-radius: 6px;
+            padding: 12px 15px;
+            border-radius: 5px;
             border: 1px solid var(--border-color);
-            font-size: 13px;
+            border-left: 3px solid var(--accent);
+            font-size: 12px;
             color: var(--text-body);
-            border-left: 4px solid var(--accent); /* Adds professional accent */
-            text-align: justify;
-            line-height: 1.3;
-            /* margin-left: 11px; */
+            line-height: 1.55;
+            transition: background 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+        }
+
+        .reference-card strong {
+            color: var(--primary);
+            font-weight: 700;
         }
 
         .reference-card a {
-            color: var(--accent);
+            color: var(--accent-light);
             font-weight: 500;
             text-decoration: none;
         }
 
         .reference-section {
-            margin-top: 20px;
+            margin-top: 16px;
             page-break-inside: avoid;
         }
 
         .qr-code-container {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 16px;
         }
+
         .qr-code-container img {
-            width: 90px;
-            height: 90px;
-            padding: 4px;
-            background: white;
+            width: 76px;
+            height: 76px;
+            padding: 3px;
+            background: #ffffff;
             border: 1px solid var(--border-color);
-            border-radius: 4px;
+            border-radius: 3px;
         }
 
-        /* Secondary Action: Theme */
+        .mobile-header {
+            display: none;
+        }
+
+        .floating-actions {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .btn-print,
         .btn-toggle-theme {
-            right: 240px;
+            height: 44px;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+            background: var(--page-bg);
+            color: var(--text-dark);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+        }
+
+        .btn-print {
+            padding: 0 18px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .btn-print .btn-label {
+            line-height: 1;
+        }
+
+        .btn-toggle-theme {
             width: 44px;
+            padding: 0;
+            font-size: 15px;
         }
 
-        /* DARK MODE BUTTON STYLE */
+        .btn-print:hover,
+        .btn-toggle-theme:hover {
+            transform: translateY(-1px);
+            border-color: var(--accent);
+            color: var(--accent);
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+        }
+
         body.dark-mode .btn-toggle-theme {
-            /* Only change icon color to Amber for the 'Sun' effect */
-            color: #fbbf24; 
-            border-color: rgba(251, 191, 36, 0.4);
+            color: #f5c66a;
         }
+
         body.dark-mode .btn-toggle-theme:hover {
-            color: #f59e0b;
-            border-color: #f59e0b;
-            box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+            color: #ffd58f;
+            border-color: rgba(255, 213, 143, 0.55);
         }
 
-        .mobile-header { display: none; }
+        body.dark-mode .floating-actions .btn-print,
+        body.dark-mode .floating-actions .btn-toggle-theme {
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42);
+        }
 
-        /* MOBILE RESPONSIVENESS */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
         @media screen and (max-width: 800px) {
             body {
                 padding: 0;
-                background: white;
                 display: block;
             }
 
             .cv-page {
                 width: 100%;
+                max-width: 100%;
                 box-shadow: none;
                 min-height: auto;
                 display: flex;
                 flex-direction: column;
-                padding: 20px; /* Restore padding for mobile container */
+                padding: 20px;
+                border: 0;
+                border-radius: 0;
             }
 
-            /* FLATTEN LAYOUT FOR REORDERING */
-            .sidebar, .main-content {
+            .sidebar,
+            .main-content {
                 display: contents;
             }
 
-            /* REORDER SECTIONS */
-            .profile-img-container { order: 1; margin-top: 20px; }
-            .mobile-header { order: 2; text-align: center; }
-            
-            .contact-section { 
-                order: 3; 
+            .profile-img-container {
+                order: 1;
+                margin-top: 20px;
+            }
+
+            .mobile-header {
+                order: 2;
+                text-align: center;
+            }
+
+            .contact-section {
+                order: 3;
                 text-align: center;
                 border-bottom: 1px solid var(--border-color);
                 padding-bottom: 10px;
                 margin-bottom: 20px;
             }
-            /* Center contact items inside the contact section */
-            .contact-section .contact-item { justify-content: center; }
 
-            .summary { order: 4; }
-            .experience-section { order: 5; 
-            padding-bottom: 20px;
+            .contact-section .contact-item {
+                justify-content: center;
             }
-            
-            .skills-section { order: 6; margin-top: 10px; }
-            .education-section { order: 7; 
-            margin-bottom: 0;
+
+            .summary {
+                order: 4;
             }
-            .reference-section { order: 8; }
+
+            .experience-section {
+                order: 5;
+                padding-bottom: 20px;
+            }
+
+            .skills-section {
+                order: 6;
+                margin-top: 10px;
+            }
+
+            .education-section {
+                order: 7;
+                margin-bottom: 0;
+            }
+
+            .reference-section {
+                order: 8;
+            }
+
+            .mobile-header {
+                display: block;
+                margin-bottom: 20px;
+            }
+
+            .mobile-header .name {
+                font-size: 22px;
+            }
+
+            .mobile-header .designation {
+                font-size: 10px;
+            }
+
+            .main-content .header {
+                display: none;
+            }
+
+            .floating-actions {
+                top: auto;
+                right: auto;
+                left: 50%;
+                bottom: calc(env(safe-area-inset-bottom, 0px) + 8px);
+                transform: translateX(-50%);
+                flex-direction: row;
+                gap: 5px;
+                padding: 4px;
+                border-radius: 999px;
+                border: 1px solid rgba(138, 109, 48, 0.24);
+                background: rgba(255, 255, 255, 0.72);
+                backdrop-filter: blur(14px) saturate(125%);
+                -webkit-backdrop-filter: blur(14px) saturate(125%);
+                box-shadow: 0 8px 20px rgba(16, 12, 4, 0.16);
+            }
 
             .btn-print {
-                top: auto;
-                bottom: 20px;
-                right: 20px;
-                width: 45px;
-                height: 45px;
+                width: 34px;
+                height: 34px;
                 padding: 0;
+                font-size: 0;
                 gap: 0;
                 border-radius: 50%;
-                justify-content: center;
-                font-size: 0; /* Hide text, show icon only */
+                letter-spacing: 0;
+                border-color: rgba(138, 109, 48, 0.45);
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(245, 238, 223, 0.96) 100%);
+                box-shadow: 0 6px 12px rgba(25, 18, 8, 0.14);
+                display: grid;
+                place-items: center;
             }
-            
+
             .btn-print i {
+                font-size: 12px;
                 margin: 0;
-                font-size: 18px;
+                line-height: 1;
+                display: block;
+            }
+
+            .btn-print .btn-label {
+                display: none;
             }
 
             .btn-toggle-theme {
-                top: auto;
-                bottom: 80px; /* Stack above print button */
-                right: 20px;
-                width: 45px;
-                height: 45px;
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+                border-color: rgba(138, 109, 48, 0.45);
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(245, 238, 223, 0.96) 100%);
+                box-shadow: 0 6px 12px rgba(25, 18, 8, 0.14);
+                display: grid;
+                place-items: center;
             }
 
-            .mobile-header { display: block; margin-bottom: 25px; }
-            .mobile-header .name { font-size: 26px; }
-            .mobile-header .designation { font-size: 14px; }
-            .main-content .header { display: none; }
-            .qr-code-container { display: none; }
-            .mobile-vcard-btn { display: block; }
+            .btn-toggle-theme i {
+                font-size: 12px;
+                margin: 0;
+                line-height: 1;
+                display: block;
+            }
 
-            /* BETTER MOBILE TYPOGRAPHY: Switch from Justify to Left */
-            .summary, 
-            .job-desc li, 
-            .reference-card { text-align: left; }
+            .btn-print:active,
+            .btn-toggle-theme:active {
+                transform: scale(0.96);
+                box-shadow: 0 7px 14px rgba(25, 18, 8, 0.18);
+            }
+
+            body.dark-mode .floating-actions {
+                border-color: rgba(212, 175, 128, 0.36);
+                background: rgba(9, 9, 16, 0.64);
+                box-shadow: 0 10px 22px rgba(0, 0, 0, 0.44);
+            }
+
+            body.dark-mode .btn-print,
+            body.dark-mode .btn-toggle-theme {
+                border-color: rgba(212, 175, 128, 0.45);
+                background: linear-gradient(180deg, rgba(23, 22, 33, 0.97) 0%, rgba(13, 12, 20, 0.97) 100%);
+                box-shadow: 0 7px 14px rgba(0, 0, 0, 0.38);
+            }
+
+            .qr-code-container {
+                display: none;
+            }
+
+            .mobile-vcard-btn {
+                display: block;
+            }
+
+            .summary,
+            .job-desc li,
+            .reference-card {
+                text-align: left;
+            }
         }
 
-        /* REMOVE BROWSER HEADERS/FOOTERS */
         @page {
             margin: 0;
+            size: A4;
         }
 
-        /* PRINT MEDIA QUERY */
         @media print {
-            body { background: white; padding: 0; }
-            /* Force Light Mode Variables for Print */
-            body.dark-mode {
-                --primary: #1e293b;
-                --accent: #0f766e;
-                --text-dark: #2d3748;
-                --text-light: #475569;
-                --text-body: #4a5568;
-                --sidebar-bg: #f7fafc;
-                --border-color: #e2e8f0;
-                --page-bg: #ffffff;
-                --tag-bg: #ffffff;
-                --badge-bg: #ccfbf1;
-                --badge-text: #0f766e;
-                --ref-bg: #f8f9fa;
+            * {
+                transition: none !important;
             }
-            .cv-page { width: 100%; height: 100%; box-shadow: none; display: grid; }
-            .btn-print, .btn-toggle-theme { display: none; }
-            .sidebar { background-color: #f7fafc !important; -webkit-print-color-adjust: exact; }
-            .sidebar { padding: 26px 22px; }
-            .profile-img-container { width: 132px; height: 132px; margin: 0 auto 18px; }
-            .sidebar-section { margin-bottom: 18px; }
-            .sidebar-title { margin-bottom: 11px; padding-bottom: 4px; }
-            .contact-item { margin-bottom: 9px; font-size: 12.5px; line-height: 1.4; }
-            .skill-tag { padding: 7px 11px; margin-bottom: 7px; font-size: 12px; }
-            .info-block { line-height: 1.5; margin-bottom: 9px; }
-            .qr-code-container img { width: 82px; height: 82px; }
-            .project-badge { background-color: #ccfbf1 !important; -webkit-print-color-adjust: exact; }
-            .job-card, .reference-card, .sidebar-section { page-break-inside: avoid; }
+
+            body {
+                background: #ffffff !important;
+                padding: 0;
+            }
+
+            body,
+            body.dark-mode {
+                --primary: #1a1828 !important;
+                --accent: #8a6d30 !important;
+                --accent-light: #a08040 !important;
+                --text-dark: #1a1828 !important;
+                --text-light: #5c5470 !important;
+                --text-body: #3a3452 !important;
+                --sidebar-bg: #ede8df !important;
+                --sidebar-border: #c9b88a !important;
+                --border-color: #d4c8a8 !important;
+                --page-bg: #ffffff !important;
+                --tag-bg: #f7f2e8 !important;
+                --badge-bg: #e8dfc8 !important;
+                --badge-text: #6b5020 !important;
+                --ref-bg: #f5f0e5 !important;
+                --icon-bg: #e2d9c5 !important;
+                --name-color: #1a1828 !important;
+                --hr-color: #c9b88a !important;
+            }
+
+            .cv-page {
+                width: 100%;
+                min-height: 100vh;
+                box-shadow: none !important;
+                display: grid;
+                background: #ffffff !important;
+                border: 0 !important;
+                border-radius: 0 !important;
+            }
+
+            .sidebar {
+                background: #ede8df !important;
+                border-right: 2px solid #c9b88a !important;
+            }
+
+            .name {
+                color: #1a1828 !important;
+            }
+
+            .job-role::before {
+                box-shadow: none !important;
+            }
+
+            .project-badge {
+                background: #e8dfc8 !important;
+                color: #6b5020 !important;
+            }
+
+            .skill-tag::before {
+                background: #8a6d30 !important;
+            }
+
+            .job-card,
+            .reference-card,
+            .sidebar-section {
+                page-break-inside: avoid;
+            }
+
+            .floating-actions,
+            .btn-print,
+            .btn-toggle-theme {
+                display: none !important;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+                animation: none !important;
+            }
         }
     </style>
+
 </head>
+
 <body>
 
-<button class="btn-toggle-theme" onclick="toggleTheme()" title="Toggle Dark Mode">
-    <i class="fas fa-moon"></i>
-</button>
+    <div class="floating-actions">
+        <button class="btn-toggle-theme" onclick="toggleTheme()" title="Enable Dark Mode" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
 
-<button class="btn-print" onclick="window.print()">
-    <i class="fas fa-file-pdf"></i> Print / Download PDF
-</button>
+        <button class="btn-print" onclick="window.print()" title="Print CV" aria-label="Print CV">
+            <i class="fas fa-file-pdf"></i>
+            <span class="btn-label">Print / PDF</span>
+        </button>
+    </div>
 
-<div class="cv-page">
-    <aside class="sidebar">
-        <div class="profile-img-container">
-            <img src="img/photo.jpg" alt="Md. Abdur Rahim" onerror="this.src='https://via.placeholder.com/150?text=Photo'">
-        </div>
-
-        <div class="mobile-header">
-            <h1 class="name">Md. Abdur Rahim</h1>
-            <div class="designation">Support Manager | Implementation Head</div>
-        </div>
-
-        <div class="sidebar-section contact-section">
-            <div class="sidebar-title">Contact</div>
-            <div class="contact-item">
-                <i class="fas fa-phone-alt"></i>
-                <span><a href="tel:+8801722108281">+880 1722-108281</a></span>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <span><a href="mailto:mdrahim.cse@gmail.com">mdrahim.cse@gmail.com</a></span>
-            </div>
-            <div class="contact-item">
-                <i class="fab fa-linkedin"></i>
-                <span><a href="https://www.linkedin.com/in/abrahim007" target="_blank">linkedin.com/in/abrahim007</a></span>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-globe"></i>
-                <span><a href="https://mdrahim.com" target="_blank">mdrahim.com</a></span>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span><a href="https://maps.google.com/?q=Sadhinota+Sarani,+Uttar+Badda,+Dhaka-1212" target="_blank">Sadhinota Sarani, Uttar Badda, Dhaka-1212</a></span>
-            </div>
-            
-            <!-- Mobile Only vCard Button -->
-            <div class="mobile-vcard-btn">
-                <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AMd.%20Abdur%20Rahim%0ATITLE%3ASupport%20Manager%20%7C%20ITSM%20Lead%0ATEL%3BTYPE%3DCELL%3A%2B8801722108281%0AEMAIL%3Amdrahim.cse%40gmail.com%0AURL%3Ahttps%3A%2F%2Fwww.linkedin.com%2Fin%2Fabrahim007%0AEND%3AVCARD" download="contact.vcf"><i class="fas fa-address-card"></i> Save Contact</a>
-            </div>
-        </div>
-
-        <div class="sidebar-section skills-section">
-            <div class="sidebar-title">Skills & Expertise</div>
-            <span class="skill-tag">IT Project Management</span>
-            <span class="skill-tag">Business Analysis (BA)</span>
-            <span class="skill-tag">Requirement Gathering</span>
-            <span class="skill-tag">ITSM & Operations</span>
-            <span class="skill-tag">Team Leadership</span>
-            <span class="skill-tag">Jira / Confluence</span>
-            <span class="skill-tag">MS Excel (Advanced)</span>
-        </div>
-
-        <div class="sidebar-section education-section">
-            <div class="sidebar-title">Education</div>
-            <div class="info-block">
-                <strong>B.Sc. in CSE</strong>
-                Asian University of Bangladesh<br>
-                <span style="color: var(--text-light)">2023</span>
-            </div>
-            <div class="info-block">
-                <strong>Diploma in Engineering</strong>
-                Kurigram Polytechnic Institute<br>
-                <span style="color: var(--text-light)">2020</span>
-            </div>
-            <div class="info-block">
-                <strong>Secondary School Certificate</strong>
-                Kurigram Govt. High School<br>
-                <span style="color: var(--text-light)">2016</span>
-            </div>
-        </div>
-
-        <div class="sidebar-section qr-code-container">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.linkedin.com/in/abrahim007" alt="LinkedIn QR Code">
-            <div style="font-size: 11px; color: var(--text-light); margin-top: 5px;">Scan for LinkedIn</div>
-        </div>
-
-    </aside>
-
-    <main class="main-content">
-        <header class="header">
-            <h1 class="name">Md. Abdur Rahim</h1>
-            <div class="designation">Support Manager | Implementation Head</div>
-        </header>
-
-        <div class="summary">
-            Results-driven IT professional with over 4 years of experience in Support Operations and Implementation leadership. Currently managing the national <strong>myGov ITSM Project</strong> while actively applying Business Analysis methodologies to optimize workflows and requirements. Passionate about evolving into a Project Manager role by leveraging a strong foundation in technical management, stakeholder reporting, and strategic resource allocation.
-        </div>
-
-        <div class="experience-section">
-            <div class="section-title">
-                <i class="fas fa-briefcase"></i> Professional Experience
+    <div class="cv-page">
+        <aside class="sidebar">
+            <div class="profile-img-container">
+                <img src="img/photo.jpg" alt="Md. Abdur Rahim"
+                    onerror="this.src='https://via.placeholder.com/150?text=Photo'">
             </div>
 
-            <div class="job-card">
-                <div class="job-role">Support Manager</div>
-                <div class="job-content">
-                    <div class="job-details">
-                        <span>UY Systems Ltd.</span>
-                        <span>Dec 2023 – Present</span>
+            <div class="mobile-header">
+                <h1 class="name">Md. Abdur Rahim</h1>
+                <div class="designation">Project Coordinator | Support Manager</div>
+            </div>
+
+            <div class="sidebar-section contact-section">
+                <div class="sidebar-title"><i class="fas fa-address-card"></i>Contact</div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span><a href="tel:+8801722108281">+880 1722-108281</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span><a href="mailto:mdrahim.cse@gmail.com">mdrahim.cse@gmail.com</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <span><a href="https://mdrahim.com" target="_blank" rel="noopener noreferrer">mdrahim.com</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span><a href="https://www.linkedin.com/in/abrahim007" target="_blank"
+                            rel="noopener noreferrer">linkedin.com/in/abrahim007</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span><a href="https://maps.google.com/?q=Sadhinota+Sarani,+Uttar+Badda,+Dhaka-1212" target="_blank"
+                            rel="noopener noreferrer">Sadhinota Sarani, Uttar Badda, Dhaka-1212</a></span>
+                </div>
+
+                <div class="mobile-vcard-btn">
+                    <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AMd.%20Abdur%20Rahim%0ATITLE%3AProject%20Manager%20%7C%20Project%20Coordinator%0ATEL%3BTYPE%3DCELL%3A%2B8801722108281%0AEMAIL%3Amdrahim.cse%40gmail.com%0AURL%3Ahttps%3A%2F%2Fwww.linkedin.com%2Fin%2Fabrahim007%0AEND%3AVCARD"
+                        download="contact.vcf"><i class="fas fa-address-card"></i> Save Contact</a>
+                </div>
+            </div>
+
+            <div class="sidebar-section skills-section">
+                <div class="sidebar-title"><i class="fas fa-cogs"></i>Skills &amp; Expertise</div>
+                <span class="skill-tag">IT Project Management</span>
+                <span class="skill-tag">Business Analysis (BA)</span>
+                <span class="skill-tag">Requirement Gathering</span>
+                <span class="skill-tag">ITSM &amp; Operations</span>
+                <span class="skill-tag">Team Leadership</span>
+                <span class="skill-tag">Jira / Confluence</span>
+                <span class="skill-tag">MS Excel (Advanced)</span>
+            </div>
+
+            <div class="sidebar-section education-section">
+                <div class="sidebar-title"><i class="fas fa-graduation-cap"></i>Education</div>
+                <div class="info-block">
+                    <strong>B.Sc. in CSE</strong>
+                    Asian University of Bangladesh<br>
+                    <span style="color: var(--text-light)">2023</span>
+                </div>
+                <div class="info-block">
+                    <strong>Diploma in Engineering</strong>
+                    Kurigram Polytechnic Institute<br>
+                    <span style="color: var(--text-light)">2020</span>
+                </div>
+                <div class="info-block">
+                    <strong>Secondary School Certificate</strong>
+                    Kurigram Govt. High School<br>
+                    <span style="color: var(--text-light)">2016</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section qr-code-container">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.linkedin.com/in/abrahim007"
+                    alt="LinkedIn QR Code">
+                <div style="font-size: 11px; color: var(--text-light); margin-top: 5px;">Scan for LinkedIn</div>
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1 class="name">Md. Abdur Rahim</h1>
+                <div class="designation">Project Coordinator | Support Manager</div>
+            </header>
+
+            <div class="summary">
+                IT professional with over 4 years of experience leading cross-functional teams. I currently manage the
+                national <strong>myGov ITSM Project</strong>, where I focus on system Implementation, mitigating risks,
+                and
+                enforcing SLAs. I am looking to bring this technical leadership to a role focused on complete project
+                ownership, guiding teams to deliver on core business objectives.
+            </div>
+
+            <div class="experience-section">
+                <div class="section-title">
+                    <i class="fas fa-briefcase"></i>
+                    <span class="section-title-text">Professional Experience</span>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-role">Project Coordinator &amp; Support Manager</div>
+                    <div class="job-content">
+                        <div class="job-details">
+                            <span>UY Systems Ltd.</span>
+                            <span>Dec 2023 – Present</span>
+                        </div>
+                        <span class="project-badge">Project: myGov ITSM Project (a2i)</span>
+                        <div class="job-desc">
+                            <ul>
+                                <li><strong>Team Leadership:</strong> Led the Support, Implementation, Call Center QA
+                                    teams for the national myGov ITSM project. I managed daily schedules and team
+                                    resources to keep operations running smoothly.</li>
+                                <li><strong>System Implementation:</strong> Managed the practical implementation of
+                                    myGov system for various government offices/agencies. This involved handling system
+                                    configurations, user onboarding, and live technical support.</li>
+                                <li><strong>Stakeholder Reporting:</strong> Built and maintained clear reporting systems
+                                    to give executives and government stakeholders accurate updates on team performance
+                                    and project health.
+                                </li>
+                                <li><strong>SLA &amp; Operations Management:</strong> Handled daily operational tasks and
+                                    solved problems early to ensure our support and call center teams strictly met all
+                                    client Service Level Agreements.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <span class="project-badge">Project: myGov ITSM Project (a2i)</span>
-                    <div class="job-desc">
-                        <ul>
-                            <li><strong>Team Leadership:</strong> Lead the Support and Implementation team for the myGov ITSM project, ensuring efficient service delivery.</li>
-                            <li><strong>Implementation & Analysis:</strong> Oversee deployment of ITSM solutions and analyze client requirements for system optimization.</li>
-                            <li><strong>Reporting:</strong> Manage all reporting requirements, generating detailed progress reports and performance metrics.</li>
-                            <li><strong>Strategy:</strong> Coordinate daily operations to ensure Service Level Agreements (SLAs) are met.</li>
-                        </ul>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-role">Sr. Executive (Implementation &amp; Support)</div>
+                    <div class="job-content">
+                        <div class="job-details">
+                            <span>Business Automation Ltd.</span>
+                            <span>Mar 2021 – Nov 2023</span>
+                        </div>
+                        <span class="project-badge">Project: National Portal Framework (a2i)</span>
+                        <div class="job-desc">
+                            <ul>
+                                <li><strong>Team Operations:</strong> Guided daily support tasks and mentored team
+                                    members to keep the portal's operations running smoothly.</li>
+                                <li><strong>Quality Assurance:</strong> Handled manual testing for government website
+                                    features to make sure everything worked exactly as required.</li>
+                                <li><strong>Client Support:</strong> Managed incoming technical issues and user
+                                    requests. I focused on fixing the root causes of problems to reduce future support
+                                    tickets.</li>
+                                <li><strong>Training &amp; Documentation:</strong> Wrote clear user guides and led
+                                    practical training sessions so users knew exactly how to navigate the National
+                                    Portal
+                                    Framework.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-card" style="margin-bottom: 0;">
+                    <div class="job-role">Data Entry Operator</div>
+                    <div class="job-content">
+                        <div class="job-details">
+                            <span>Chhinnamukul Bangladesh</span>
+                            <span>Jul 2018 – Nov 2019</span>
+                        </div>
+                        <span class="project-badge">Project: Basic Literacy Project (MOPME)</span>
+                        <div class="job-desc">
+                            <ul>
+                                <li>Accurately entered and updated data into designated systems with high precision.
+                                </li>
+                                <li>Performed quality checks on data to identify and correct errors.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="job-card">
-                <div class="job-role">Sr. Support Executive</div>
-                <div class="job-content">
-                    <div class="job-details">
-                        <span>Business Automation Ltd.</span>
-                        <span>Mar 2021 – Nov 2023</span>
-                    </div>
-                    <span class="project-badge">Project: National Portal Framework (a2i)</span>
-                    <div class="job-desc">
-                        <ul>
-                            <li><strong>Leadership:</strong> Led the support team and provided mentorship to resolve escalated technical issues.</li>
-                            <li><strong>QA & Requirement Validation:</strong> Executed manual testing procedures to verify government website functionality against requirements.</li>
-                            <li><strong>Client Ops:</strong> Managed multi-channel support and tracked inbound tickets for clear resolutions.</li>
-                            <li><strong>Training:</strong> Conducted training sessions on National Portal Framework.</li>
-                        </ul>
-                    </div>
+            <div class="reference-section">
+                <div class="section-title">
+                    <i class="fas fa-user-check"></i>
+                    <span class="section-title-text">Reference</span>
+                </div>
+                <div class="reference-card">
+                    <strong>Md. Moniruzzaman, PMP</strong><br>
+                    Project Director &amp; CTO, UY Systems Ltd.<br>
+                    <a href="mailto:zaman@uysys.com">zaman@uysys.com</a> | +880 1712-027826
                 </div>
             </div>
 
-            <div class="job-card" style="margin-bottom: 0;">
-                <div class="job-role">Data Entry Operator</div>
-                <div class="job-content">
-                    <div class="job-details">
-                        <span>Chhinnamukul Bangladesh</span>
-                        <span>Jul 2018 – Nov 2019</span>
-                    </div>
-                    <span class="project-badge">Project: Basic Literacy Project (MOPME)</span>
-                    <div class="job-desc">
-                        <ul>
-                            <li>Accurately entered and updated data into designated systems with high precision.</li>
-                            <li>Performed quality checks on data to identify and correct errors.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </main>
+    </div>
 
-        <div class="reference-section">
-            <div class="section-title">
-                <i class="fas fa-user-check"></i> Reference
-            </div>
-            <div class="reference-card">
-                <strong>Md. Moniruzzaman, PMP</strong><br>
-                Project Director & CTO, UY Systems Ltd.<br>
-                <a href="mailto:zaman@uysys.com">zaman@uysys.com</a> | +880 1712-027826
-            </div>
-        </div>
-
-    </main>
-</div>
-
-<script>
-    function toggleTheme() {
-        document.body.classList.toggle('dark-mode');
-        const icon = document.querySelector('.btn-toggle-theme i');
-        if (document.body.classList.contains('dark-mode')) {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        } else {
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.btn-toggle-theme i');
+            const button = document.querySelector('.btn-toggle-theme');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                button.setAttribute('title', 'Enable Light Mode');
+                button.setAttribute('aria-label', 'Enable light mode');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                button.setAttribute('title', 'Enable Dark Mode');
+                button.setAttribute('aria-label', 'Enable dark mode');
+            }
         }
-    }
-</script>
+    </script>
+
 </body>
+
 </html>
